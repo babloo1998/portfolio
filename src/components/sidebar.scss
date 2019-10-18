@@ -1,0 +1,36 @@
+.sidebar{
+    width: 15%;
+    background: #1c262b;
+    text-align: center;
+    .image-wrapper{
+        max-width: 100%;
+        img{
+            max-width: 80%;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+    }
+    p{
+        font-size: 20px;
+        font-family: 'Cousine', monospace;
+        font-weight: 900;
+        padding: 5px 10px;
+        color: white;
+        background: #3ba163;
+    }
+    ul{
+        list-style: none;
+        padding: 0px;
+        li{
+            padding: 15px;
+            color: #566369;
+            cursor: pointer;
+            font-family: 'Cousine', monospace;
+            border-bottom: 1pt solid #566369;
+            &:hover{
+                color: #ffffff;
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+            }
+        }
+    }
+}

@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Timeline from './container/timeline';
+import Home from './container/home';
+import NoMatchPage from './components/noMatchFound'
+import './main.css';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-function App() {
+class App extends React.Component {  
+  // constructor(props){
+  //   super(props);
+  // }
+
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path="/timeline" component = {Timeline}/>
+          <Route component={NoMatchPage} />
+        </Switch>    
+      </Router>
     </div>
   );
+  }
 }
 
 export default App;
